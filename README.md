@@ -7,6 +7,7 @@ This repository contains a Snakemake workflow designed to facilitate the analysi
 Workflow Overview
 ## 1. Snakemake File 1: Download and Initial Processing
 - Downloads single-ended SRA files from NCBI using accessions specified in an accessions.txt file.
+- Converts accessions to a python list using read_accessions.py
 - Converts SRA files to FASTQ format.
 - Performs quality control using FastQC and MultiQC.
 ## 2. Snakemake File 2: Trimming and Additional QC
