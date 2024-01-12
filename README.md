@@ -19,13 +19,14 @@ Workflow Overview
 - Utilizes Samtools to extract mapping statistics, including overall statistics (samtools stats) and flag statistics (samtools flagstat).
 
 ## Usage
-Prerequisites
+### Prerequisites
 Before running the workflow, ensure you have the necessary tools installed, such as fastqc, sra-tools, trimmomatic, samtools, and BLEND.
 
+```bash
 conda install -c bioconda snakemake
 conda install -c bioconda fastqc trimmomatic samtools 
 conda install -c bioconda blend-bio
-
+```
 Running the Workflow
 Clone this repository:
 
