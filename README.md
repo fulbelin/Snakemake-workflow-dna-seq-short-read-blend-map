@@ -31,8 +31,6 @@ Clone this repository:
 
 ```bash
 git clone https://github.com/fulbelin/Snakemake-workflow-dna-seq-short-read-blend-map.git
-```bash
-
 cd Snakemake-workflow-dna-seq-short-read-blend-map
 
 Prepare an accessions.txt file and trimmed_acessions txt file with the desired SRA accessions for download and trimming.
