@@ -29,16 +29,16 @@ conda install -c bioconda blend-bio
 Running the Workflow
 Clone this repository:
 
-bash
-Copy code
+
 git clone https://github.com/fulbelin/Snakemake-workflow-dna-seq-short-read-blend-map.git
+
 cd Snakemake-workflow-dna-seq-short-read-blend-map
+
 Prepare an accessions.txt file and trimmed_acessions txt file with the desired SRA accessions for download and trimming.
 
 Execute the Snakemake files sequentially:
 
-bash
-Copy code
+
 snakemake --snakefile Snakefile1 --cores 1 --latency-wait 30
 snakemake --snakefile Snakefile2 --cores 1 --latency-wait 30
 snakemake --snakefile Snakefile3 --cores 1 --latency-wait 30
