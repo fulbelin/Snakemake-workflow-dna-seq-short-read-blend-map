@@ -24,8 +24,7 @@ rule blend_map:
     output:
         "mapped_snakemake/{sample}.sam"
     shell:
-        "/home/zergovic/miniconda3/envs/snakemake-tutorial/bin/blend -ax sr {input.reference} {input.file} > {output}"
-
+        "/home/zergovic/miniconda3/envs/snakemake-tutorial/bin/blend -ax map-pb {input.reference} {input.file} > {output}"
 rule sam_to_bam:
     input:
         "mapped_snakemake/{sample}.sam"
