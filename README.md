@@ -2,7 +2,7 @@
 A Snakemake workflow (in progress) for mapping DNA PacBio sequencing data with BLEND.
 
 
-This repository contains a Snakemake workflow designed to facilitate the analysis of NCBI single-ended SRA files using BLEND. The workflow is divided into three distinct Snakemake files, each handling specific tasks in the analysis pipeline.
+This repository contains a Snakemake workflow designed to facilitate the analysis of NCBI single-ended Pac BIO SRA files using BLEND. The workflow is divided into three distinct Snakemake files, each handling specific tasks in the analysis pipeline.
 
 Workflow Overview
 ## 1. Snakemake File 1: Download and Initial Processing
