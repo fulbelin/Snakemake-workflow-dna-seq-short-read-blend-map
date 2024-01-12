@@ -23,13 +23,17 @@ Workflow Overview
 Prerequisites
 Before running the workflow, ensure you have the necessary tools installed, such as fastqc, sra-tools, trimmomatic, samtools, and BLEND.
 
+conda install -c bioconda snakemake
+conda install -c bioconda fastqc trimmomatic samtools 
+conda install -c bioconda blend-bio
+
 Running the Workflow
 Clone this repository:
 
 bash
 Copy code
 git clone https://github.com/fulbelin/Snakemake-workflow-dna-seq-short-read-blend-map.git
-cd your-repo
+cd Snakemake-workflow-dna-seq-short-read-blend-map
 Prepare an accessions.txt file and trimmed_acessions txt file with the desired SRA accessions for download and trimming.
 
 Execute the Snakemake files sequentially:
