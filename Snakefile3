@@ -1,0 +1,48 @@
+import os
+from read_accessions import read_txt_file
+
+# Read sample names from the txt file
+trimmed_accession_list = read_txt_file("trimmed_accessions.txt")
+
+rule all:
+    input:
+        expand("mapped_snakemake/{sample}.stats", sample=trimmed_accession_list[::-1])
+
+rule blend_index:
+    input:
+        "yeast_genome.fna"
+    output:
+        "yeast.mmi"
+    shell:
+        "blend -d {output} {input}"
+
+
+rule blend_map:
+    input:
+        reference="yeast.mmi",
+        file=lambda wildcards: os.path.abspath(os.path.join("trimmed_snakemake", wildcards.sample, f"{wildcards.sample}_trimmed.fastq"))
+    output:
+        "mapped_snakemake/{sample}.sam"
+    shell:
+        "/home/zergovic/miniconda3/envs/snakemake-tutorial/bin/blend -ax sr {input.reference} {input.file} > {output}"
+
+rule sam_to_bam:
+    input:
+        "mapped_snakemake/{sample}.sam"
+    output:
+        "mapped_snakemake/{sample}.bam"
+    run:
+        shell("samtools view -bS {input} > {output}")
+
+rule samtools_stats:
+    input:
+        "mapped_snakemake/{sample}.bam"
+    output:
+        stats="mapped_snakemake/{sample}.stats",
+        flagstat="mapped_snakemake/{sample}.flagstat"
+    run:
+        shell("""
+            samtools stats {input} > {output.stats} &&
+            samtools flagstat {input} > {output.flagstat}
+        """)
+

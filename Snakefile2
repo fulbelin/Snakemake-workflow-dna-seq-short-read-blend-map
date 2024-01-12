@@ -1,0 +1,51 @@
+from read_accessions import read_txt_file
+from snakemake.io import glob_wildcards
+
+# Read sample names from the txt file
+trimmed_accession_list = read_txt_file("trimmed_accessions.txt")
+
+
+
+rule all:
+    input:
+        expand("trimmed_snakemake/{sample}/{sample}_trimmed_fastqc.html", sample=trimmed_accession_list),
+        "trimmed_snakemake/trimmed_multiqc_report.html"
+        
+
+rule trim_fastq:
+    input:
+        "snakemake/{sample}/{sample}.fastq"
+    output:
+        "trimmed_snakemake/{sample}/{sample}_trimmed.fastq"
+    shell:
+        """
+        echo 'Running trimming for {wildcards.sample}' &&
+        trimmomatic SE -phred33 {input} trimmed_snakemake/{wildcards.sample}/{wildcards.sample}_trimmed_temp.fastq LEADING:20 TRAILING:20 SLIDINGWINDOW:10:20 HEADCROP:20 &&
+        [ ! -e trimmed_snakemake/{wildcards.sample}/{wildcards.sample}_trimmed_temp.fastq ] || [ "{output}" -ef "trimmed_snakemake/{wildcards.sample}/{wildcards.sample}_trimmed_temp.fastq" ] || mv trimmed_snakemake/{wildcards.sample}/{wildcards.sample}_trimmed_temp.fastq "{output}" ||
+        (echo 'Error in trimming' && exit 1)
+        """
+
+rule fastqc_trimmed:
+    input:
+        "trimmed_snakemake/{sample}/{sample}_trimmed.fastq"
+    output:
+        html="trimmed_snakemake/{sample}/{sample}_trimmed_fastqc.html",
+        zip="trimmed_snakemake/{sample}/{sample}_trimmed_fastqc.zip"
+    shell:
+        """
+        echo "Processing trimmed sample: {wildcards.sample}"
+        fastqc {input}
+        """
+
+rule trimmed_multiqc:
+    input:
+        expand("trimmed_snakemake/{sample}/{sample}_trimmed_fastqc.zip", sample=trimmed_accession_list)
+    output:
+        "trimmed_snakemake/trimmed_multiqc_report.html"
+    shell:
+        "multiqc trimmed_snakemake/ --outdir trimmed_snakemake/ --filename trimmed_multiqc_report -f"
+
+
+
+
+
