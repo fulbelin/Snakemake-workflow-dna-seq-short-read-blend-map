@@ -29,8 +29,9 @@ conda install -c bioconda blend-bio
 Running the Workflow
 Clone this repository:
 
-
+```bash
 git clone https://github.com/fulbelin/Snakemake-workflow-dna-seq-short-read-blend-map.git
+```bash
 
 cd Snakemake-workflow-dna-seq-short-read-blend-map
 
