@@ -27,7 +27,7 @@ conda install -c bioconda snakemake
 conda install -c bioconda fastqc trimmomatic samtools 
 conda install -c bioconda blend-bio
 ```
-Running the Workflow
+### For running the workflow:
 Clone this repository:
 
 ```bash
