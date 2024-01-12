@@ -16,7 +16,6 @@ Workflow Overview
 - Indexes the reference genome for BLEND analysis.
 - Maps the preprocessed reads to the indexed reference genome using BLEND.
 - Converts SAM files to BAM format.
-- Mapping Statistics Extraction
 - Utilizes Samtools to extract mapping statistics, including overall statistics (samtools stats) and flag statistics (samtools flagstat).
 
 ## Usage
