@@ -13,7 +13,7 @@ Workflow Overview
 ## 2. Snakemake File 2: Trimming and Additional QC
 - Trims the FASTQ files to enhance data quality.
 - Performs FastQC and MultiQC on the trimmed files for post-trimming quality assessment.
-## 3. Snakemake File 3: Blend Indexing and Mapping
+## 3. Snakemake File 3: BLEND Indexing and Mapping
 - Indexes the reference genome for BLEND analysis.
 - Maps the preprocessed reads to the indexed reference genome using BLEND.
 - Converts SAM files to BAM format.
