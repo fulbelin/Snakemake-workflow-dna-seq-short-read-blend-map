@@ -32,15 +32,17 @@ Clone this repository:
 ```bash
 git clone https://github.com/fulbelin/Snakemake-workflow-dna-seq-short-read-blend-map.git
 cd Snakemake-workflow-dna-seq-short-read-blend-map
+```
 
 Prepare an accessions.txt file and trimmed_acessions txt file with the desired SRA accessions for download and trimming.
 
 Execute the Snakemake files sequentially:
 
-
+```bash
 snakemake --snakefile Snakefile1 --cores 1 --latency-wait 30
 snakemake --snakefile Snakefile2 --cores 1 --latency-wait 30
 snakemake --snakefile Snakefile3 --cores 1 --latency-wait 30
+```
 
 ## Notes
 - Each Snakemake file is modular, allowing for independent execution or integration into other workflows.
