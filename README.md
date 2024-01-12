@@ -50,7 +50,7 @@ snakemake --snakefile Snakefile3 --cores 1 --latency-wait 30
 - Each Snakemake file is modular, allowing for independent execution or integration into other workflows.
 - Adjust the parameters in the Snakemake files according to your specific needs.
 - Feel free to customize and extend this workflow to suit your requirements. For detailed information on each step and the parameters used, refer to the respective Snakemake files and associated configuration files.
--The wrapper was tested on SRR24768604 ERR10357101 IDs.
+- The wrapper was tested on SRR24768604 ERR10357101 IDs.
 
 If you encounter issues or have suggestions for improvements, please open an issue in the repository. Happy analyzing!
 
