@@ -1,0 +1,3 @@
+Sample	Samtools	HTSlib	FastQC
+FastQC			0.12.1
+Samtools	1.18	1.17	

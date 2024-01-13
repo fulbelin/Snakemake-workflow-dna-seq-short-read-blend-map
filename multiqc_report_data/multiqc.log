@@ -1,0 +1,28 @@
+[2024-01-13 00:18:55,477] multiqc                                            [DEBUG  ]  This is MultiQC v1.19
+[2024-01-13 00:18:55,478] multiqc                                            [DEBUG  ]  Command used: /home/zergovic/miniconda3/envs/snakemake-tutorial/bin/multiqc . --filename multiqc_report.html -f
+[2024-01-13 00:18:56,283] multiqc                                            [DEBUG  ]  Latest MultiQC version is v1.19
+[2024-01-13 00:18:56,283] multiqc                                            [DEBUG  ]  Working dir : /mnt/c/Users/fulbe/snakemake
+[2024-01-13 00:18:56,283] multiqc                                            [DEBUG  ]  Template    : default
+[2024-01-13 00:18:56,283] multiqc                                            [DEBUG  ]  Running Python 3.10.8 | packaged by conda-forge | (main, Nov 22 2022, 08:23:14) [GCC 10.4.0]
+[2024-01-13 00:18:56,284] multiqc                                            [DEBUG  ]  Analysing modules: custom_content, ccs, ngsderive, purple, conpair, lima, peddy, somalier, methylQA, mosdepth, phantompeakqualtools, qualimap, preseq, hifiasm, quast, qorts, rna_seqc, rockhopper, rsem, rseqc, busco, bustools, goleft_indexcov, gffcompare, disambiguate, supernova, deeptools, sargasso, verifybamid, mirtrace, happy, mirtop, sambamba, gopeaks, homer, hops, macs2, theta2, snpeff, gatk, htseq, bcftools, featureCounts, fgbio, dragen, dragen_fastqc, dedup, pbmarkdup, damageprofiler, mapdamage, biobambam2, jcvi, mtnucratio, picard, vep, bakta, prokka, qc3C, nanostat, samblaster, samtools, sexdeterrmine, seqera_cli, eigenstratdatabasetools, bamtools, jellyfish, vcftools, longranger, stacks, varscan2, snippy, umitools, truvari, bbmap, bismark, biscuit, diamond, hicexplorer, hicup, hicpro, salmon, kallisto, slamdunk, star, hisat2, tophat, bowtie2, bowtie1, cellranger, snpsplit, odgi, pangolin, nextclade, freyja, humid, kat, leehom, librarian, adapterRemoval, bbduk, clipandmerge, cutadapt, flexbar, sourmash, kaiju, bracken, kraken, malt, motus, trimmomatic, sickle, skewer, sortmerna, biobloomtools, fastq_screen, afterqc, fastp, fastqc, filtlong, prinseqplusplus, pychopper, porechop, pycoqc, minionqc, anglerfish, multivcfanalyzer, clusterflow, checkqc, bcl2fastq, bclconvert, interop, ivar, flash, seqyclean, optitype, whatshap, xenome, xengsort
+[2024-01-13 00:18:56,284] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /tmp/tmppsa6z256
+[2024-01-13 00:18:56,285] multiqc                                            [INFO   ]  Search path : /mnt/c/Users/fulbe/snakemake
+[2024-01-13 00:18:58,607] multiqc                                            [DEBUG  ]  Summary of files that were skipped by the search: [skipped_file_contents_search_errors: 356] // [skipped_module_specific_max_filesize: 264] // [skipped_no_match: 50] // [skipped_ignore_pattern: 18] // [skipped_directory_fn_ignore_dirs: 6] // [skipped_filesize_limit: 1]
+[2024-01-13 00:18:58,933] multiqc.plots.bargraph                             [DEBUG  ]  Using matplotlib version 3.8.2
+[2024-01-13 00:18:58,934] multiqc.plots.linegraph                            [DEBUG  ]  Using matplotlib version 3.8.2
+[2024-01-13 00:18:58,935] multiqc                                            [DEBUG  ]  No samples found: custom_content
+[2024-01-13 00:18:58,991] multiqc.modules.samtools.samtools                  [INFO   ]  Found 4 stats reports
+[2024-01-13 00:18:59,012] multiqc.modules.samtools.samtools                  [INFO   ]  Found 4 flagstat reports
+[2024-01-13 00:18:59,028] multiqc                                            [DEBUG  ]  No samples found: snippy
+[2024-01-13 00:18:59,071] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: ERR10357101
+[2024-01-13 00:18:59,096] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR12279038
+[2024-01-13 00:18:59,109] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR24768604
+[2024-01-13 00:18:59,117] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: SRR7896012
+[2024-01-13 00:18:59,119] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 4 reports
+[2024-01-13 00:18:59,167] multiqc.utils.software_versions                    [DEBUG  ]  Reading software versions from config.software_versions
+[2024-01-13 00:18:59,187] multiqc                                            [DEBUG  ]  Compressing plot data
+[2024-01-13 00:18:59,294] multiqc                                            [INFO   ]  Report      : multiqc_report.html
+[2024-01-13 00:18:59,294] multiqc                                            [INFO   ]  Data        : multiqc_report_data   (overwritten)
+[2024-01-13 00:18:59,294] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmppsa6z256/multiqc_data' to '/mnt/c/Users/fulbe/snakemake/multiqc_report_data'
+[2024-01-13 00:18:59,366] multiqc                                            [DEBUG  ]  Full report path: /mnt/c/Users/fulbe/snakemake/multiqc_report.html
+[2024-01-13 00:18:59,443] multiqc                                            [INFO   ]  MultiQC complete

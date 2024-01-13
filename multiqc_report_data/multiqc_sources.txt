@@ -1,0 +1,11 @@
+Module	Section	Sample Name	Source
+Samtools	stats	ERR10357101	/mnt/c/Users/fulbe/snakemake/mapped_snakemake/ERR10357101.stats
+Samtools	stats	SRR24768604	/mnt/c/Users/fulbe/snakemake/mapped_snakemake/SRR24768604.stats
+Samtools	flagstat	ERR10357101	/mnt/c/Users/fulbe/snakemake/mapped_snakemake/ERR10357101.flagstat
+Samtools	flagstat	SRR24768604	/mnt/c/Users/fulbe/snakemake/mapped_snakemake/SRR24768604.flagstat
+Snippy	snippy	multiqc	/mnt/c/Users/fulbe/snakemake/trimmed_snakemake/trimmed_multiqc_report_data/multiqc.log
+Snippy	snippy	multiqc_sources	/mnt/c/Users/fulbe/snakemake/trimmed_snakemake/trimmed_multiqc_report_data/multiqc_sources.txt
+FastQC	all_sections	ERR10357101	/mnt/c/Users/fulbe/snakemake/trimmed_snakemake/ERR10357101/ERR10357101_trimmed_fastqc.zip
+FastQC	all_sections	SRR12279038	/mnt/c/Users/fulbe/snakemake/trimmed_snakemake/SRR12279038/SRR12279038_trimmed_fastqc.zip
+FastQC	all_sections	SRR24768604	/mnt/c/Users/fulbe/snakemake/trimmed_snakemake/SRR24768604/SRR24768604_trimmed_fastqc.zip
+FastQC	all_sections	SRR7896012	/mnt/c/Users/fulbe/snakemake/trimmed_snakemake/SRR7896012/SRR7896012_trimmed_fastqc.zip
